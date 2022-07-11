@@ -1,4 +1,4 @@
-# supersites-vue-frontend
+# vue-frontend
 
 ## Build Setup
 
