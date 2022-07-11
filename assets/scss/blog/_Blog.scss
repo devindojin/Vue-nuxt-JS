@@ -1,0 +1,113 @@
+.blog-hero {
+  padding-top: 162px;
+  margin-bottom: 72px;
+
+  @include below($ipad) {
+    padding-top: 110px;
+    margin-bottom: 56px;
+  }
+  @include below($mobile) {
+    padding-top: 92px;
+    margin-bottom: 48px;
+  }
+
+  h1 {
+    margin-bottom: 41px;
+    @include below($mobile) {
+      margin-bottom: 36px;
+    }
+  }
+  .btn-grey {
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.blog-list {
+  .blog-list-item {
+    margin-bottom: 56px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include below($ipad) {
+      margin-bottom: 48px;
+    }
+
+    .blog-list-item-thumbnail {
+      display: block;
+      max-width: 100%;
+    }
+    h2 {
+      margin-top: 23px;
+      font-weight: bold;
+      @include below($mobile) {
+        margin-bottom: 17px;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .blog-list-item-excerpt {
+      max-width: 66.66%;
+      margin-top: 33px;
+
+      @include below($ipad) {
+        max-width: 100%;
+      }
+      @include below($mobile) {
+        margin-top: 22px;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .post-meta {
+      margin-top: 22px;
+      .author-img {
+        @include below($mobile) {
+          width: 42px;
+          height: 42px;
+          margin-right: 12px;
+          // display: none;
+        }
+      }
+      .author-info {
+        @include below($mobile) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .infinite-loading-container {
+    margin-bottom: 130px;
+    background: #eceff5;
+    width: 100%;
+    padding: 26px 0 29px;
+    @include below($ipad) {
+      padding: 23px 0;
+    }
+    h5 {
+      font: 500 22px/29px Roboto;
+      color: #686e9a;
+      letter-spacing: 0.26px;
+      margin: 0;
+
+      @include below($mobile) {
+        font: 500 20px/24px Roboto;
+      }
+    }
+  }
+}
+.blog-cats-wrapper {
+  @include below($ipad) {
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+}

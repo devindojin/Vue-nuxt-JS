@@ -1,0 +1,18 @@
+$black: #000;
+$color-success: #2ad268;
+$color-info: #2a72d2;
+$color-warning: #f5bc1d;
+$color-error: #f8333c;
+
+.anchor {
+  // color: $black;
+  // text-decoration: none;
+  border-bottom: 1px solid #bdc2ce;
+  @include below($ipad) {
+  }
+  @include below($mobile) {
+  }
+  &:hover {
+    // border-color: #000;
+  }
+}

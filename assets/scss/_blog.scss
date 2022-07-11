@@ -1,0 +1,71 @@
+//
+// blog.scss
+//
+
+.blog-box {
+  position: relative;
+  .blog-title {
+    transition: all 0.5s;
+    color: $dark;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .blog-lable {
+    top: 30px;
+    background: $primary;
+    color: $white;
+    font-size: 13px;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    padding: 6px 14px;
+    border-radius: 20px 0px 0px 20px;
+  }
+}
+
+.blog-cats {
+  @include below($mobile) {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .btn-filter-options {
+    border-color: #bdc2ce !important;
+    background: #fff !important;
+    padding: 12px;
+    border-radius: 8px !important;
+    color: #686e9a !important;
+    font-weight: bold;
+    position: relative;
+    &:hover {
+      background: #fcfcfd !important;
+      transform: none !important;
+    }
+    span {
+      margin-left: 13px;
+      margin-right: 13px;
+    }
+    svg {
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      opacity: 0;
+    }
+    &.selected {
+      color: #4252fd !important;
+      border-color: rgba(#4252fd, 0.33) !important;
+      background: #f0f1ff !important;
+      &:hover {
+        background: #e8eaff !important;
+      }
+      span {
+        margin-left: 26px;
+        margin-right: 0;
+      }
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+}

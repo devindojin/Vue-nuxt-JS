@@ -1,0 +1,48 @@
+.form-input {
+  border: 1px solid #d0d6e2;
+  color: $black;
+  height: 64px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 0;
+  font: 300 20px/38px $font-family-base;
+  border-radius: 8px;
+  @include below($ipad) {
+    font-size: 18px;
+  }
+  @include below($mobile) {
+    font-size: 16px;
+  }
+
+  &:focus {
+    border: 1px solid $black;
+  }
+}
+.warning {
+  border-left: 4px solid $color-warning !important;
+}
+
+.form-textarea {
+  border: 1px solid #d0d6e2;
+  color: $black;
+  padding: 20px;
+  outline: 0;
+  font: 300 20px/38px $font-family-base;
+
+  @include below($ipad) {
+    font-size: 18px;
+  }
+  @include below($mobile) {
+    font-size: 16px;
+  }
+
+  &:focus {
+    border: 1px solid $black;
+  }
+}
+.form-warning {
+  font: 400 16px/28px $font-family-base;
+  // color: $color-warning;
+  color: #d0d6e2;
+  margin-top: 5px;
+}

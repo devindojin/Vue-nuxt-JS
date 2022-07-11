@@ -1,0 +1,107 @@
+@import 'blog-content';
+@import 'blog-subscribe';
+@import 'blog-comments';
+@import 'blog-content-spacings';
+@import 'lastupdated';
+
+.blog-post-top {
+  // padding-top: 111px;
+  h1 {
+    font-weight: bold;
+  }
+  .blog-post-tags {
+    margin-bottom: 12px;
+    .btn-grey {
+      margin-right: 12px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .post-meta {
+    margin-top: 35px;
+    @include below($mobile) {
+      margin-top: 28px;
+    }
+  }
+  .post-thumbnail {
+    margin-top: 40px;
+    @include below($ipad) {
+      margin-top: 36px;
+    }
+
+    @include below($mobile) {
+      margin-top: 28px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.blog-post-tags {
+  margin-bottom: 50px;
+  @include below($mobile) {
+    margin-bottom: 44px;
+  }
+  .tags-wrapper {
+    width: 66.66%;
+    line-height: 28px;
+    @include below($ipad) {
+      width: 100%;
+    }
+  }
+  .tag {
+    margin-right: 5px;
+    &:after {
+      content: ',';
+    }
+    &:last-child {
+      margin-right: 0;
+      &:after {
+        content: '';
+      }
+    }
+  }
+}
+.blog-post-actions {
+  margin-bottom: 184px;
+
+  @include below($ipad) {
+    margin-bottom: 96px;
+  }
+  @include below($mobile) {
+    margin-bottom: 88px;
+  }
+
+  .btn {
+    margin-right: 12px;
+    @include below($mobile) {
+      margin-right: 5px;
+    }
+  }
+}
+.blog-recent-posts {
+  margin-top: 144px;
+
+  @include below($ipad) {
+    margin-top: 96px;
+  }
+  @include below($mobile) {
+    margin-top: 88px;
+  }
+}
+
+.blog-comments {
+  margin-top: 144px;
+
+  @include below($ipad) {
+    margin-top: 96px;
+  }
+  @include below($mobile) {
+    margin-top: 88px;
+  }
+}

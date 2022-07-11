@@ -1,0 +1,164 @@
+.blog-content {
+  *:nth-child(1) {
+    // margin-top: 0;
+  }
+  p {
+    margin-top: 35px;
+    margin-bottom: 0;
+    // @include below($tablet) {
+    //   margin-top: 30px;
+    // }
+    @include below($ipad) {
+      margin-top: 30px;
+    }
+    @include below($mobile) {
+      margin-top: 28px;
+    }
+  }
+
+  h1 {
+    margin-top: 12px;
+    margin-bottom: 0;
+    @include h1();
+  }
+  h2 {
+    margin-top: 110px;
+    margin-bottom: 0;
+    // @include below($tablet) {
+    //   margin-top: 98px;
+    // }
+    @include h2();
+
+    @include below($ipad) {
+      margin-top: 83px;
+    }
+    @include below($mobile) {
+      margin-top: 71px;
+    }
+
+    & + * {
+      margin-top: 22px;
+    }
+  }
+  h3 {
+    @include h3();
+
+    margin-top: 77px;
+    margin-bottom: 0;
+    // @include below($tablet) {
+    //   margin-top: 72px;
+    // }
+    @include below($ipad) {
+      margin-top: 74px;
+    }
+    @include below($mobile) {
+      margin-top: 67px;
+    }
+    & + * {
+      margin-top: 24px;
+    }
+  }
+  h4 {
+    @include h4();
+
+    margin-top: 72px;
+    margin-bottom: 0;
+    // @include below($tablet) {
+    //   margin-top: 75px;
+    // }
+    @include below($ipad) {
+      margin-top: 75px;
+    }
+    @include below($mobile) {
+      margin-top: 66px;
+    }
+
+    & + * {
+      margin-top: 26px;
+    }
+  }
+  h5 {
+    @include h5();
+
+    @include below($ipad) {
+      margin-top: 50px;
+    }
+    @include below($mobile) {
+      margin-top: 40px;
+    }
+    margin-top: 60px;
+
+    margin-bottom: 0;
+    & + * {
+      margin-top: 28px;
+    }
+  }
+
+  ul,
+  ol {
+    margin-top: 19px;
+    @include below($mobile) {
+      margin-top: 16px;
+    }
+    li {
+      &:nth-child(1) {
+        p {
+          margin-top: 0;
+        }
+      }
+      &:nth-child(n + 2) {
+        p {
+          margin-top: 18px;
+        }
+      }
+    }
+    ul,
+    li {
+      margin-bottom: 20px;
+    }
+  }
+  .image-caption,
+  .caption,
+  h6,
+  .h6 {
+    margin-top: 18px;
+    margin-bottom: 0;
+    @include below($mobile) {
+      margin-top: 10px;
+    }
+  }
+  img,
+  video,
+  iframe {
+    margin-top: 50px;
+    margin-bottom: 0;
+    display: block;
+    height: auto;
+    @include below($ipad) {
+      margin-top: 43px;
+    }
+    @include below($mobile) {
+      margin-top: 39px;
+    }
+  }
+  q {
+    margin-top: 50px;
+    margin-bottom: 0;
+    @include below($ipad) {
+      margin-top: 43px;
+    }
+    @include below($mobile) {
+      margin-top: 39px;
+    }
+  }
+  blockquote {
+    margin-top: 50px;
+    margin-bottom: 0;
+    @include below($ipad) {
+      margin-top: 43px;
+    }
+    @include below($mobile) {
+      margin-top: 39px;
+    }
+  }
+}

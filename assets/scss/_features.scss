@@ -1,0 +1,42 @@
+.sec-features {
+  @include below($mobile) {
+    h2 {
+      br {
+        display: none;
+      }
+    }
+  }
+  .features-list {
+    padding-top: 10px;
+
+    .features-list-item {
+      margin-bottom: 96px;
+      @include below($ipad) {
+        margin-bottom: 64px;
+      }
+      @include below($mobile) {
+        flex-direction: column-reverse;
+        .feature-img {
+          margin-top: 28px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include above($mobile) {
+        .feature-desc {
+          padding-top: 30px;
+        }
+        &:nth-child(even) {
+          .feature-img {
+          }
+        }
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
+          .feature-img {
+          }
+        }
+      }
+    }
+  }
+}

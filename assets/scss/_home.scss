@@ -1,0 +1,333 @@
+//
+// home.scss
+//
+
+// .home-center {
+//   display: table;
+//   width: 100%;
+//   height: 100%;
+// }
+
+// .home-desc-center {
+//   display: table-cell;
+//   vertical-align: middle;
+// }
+
+.bg-home {
+  position: relative;
+  background-color: $white;
+  padding: 130px 0px 30px 0px;
+  @media (min-width: 992px) {
+    padding: 200px 0px 70px 0px;
+  }
+}
+
+.home-badge {
+  p {
+    background-color: $light;
+    display: inline-block;
+    padding: 4px 20px;
+    border-radius: 4px;
+    border: 1px solid #f6f6f6;
+  }
+}
+
+.home-content {
+  .home-title {
+    span {
+      font-weight: 300;
+    }
+  }
+}
+
+// home-2
+
+.home-img-2 {
+  img {
+    position: relative;
+    top: 100px;
+    z-index: 1;
+  }
+}
+
+.search-form {
+  input {
+    padding: 15px 20px;
+    width: 100%;
+    font-size: 17px;
+    color: $muted !important;
+    border: none;
+    outline: none !important;
+    padding-right: 160px;
+    padding-left: 30px;
+    background-color: $white;
+    border-radius: 30px;
+    box-shadow: $box-shadow;
+  }
+  button {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    outline: none !important;
+    border-radius: 30px;
+    font-size: 17px;
+    padding: 9px 30px;
+  }
+  form {
+    position: relative;
+    max-width: 600px;
+    margin: 0px auto;
+  }
+}
+
+// home-3
+
+.bg-home-3 {
+  background-image: url(../images/bg-3.jpg);
+  padding: 220px 0px 200px 0px;
+  background-position: center;
+
+  .home-title {
+    font-size: 70px;
+    line-height: 1.2;
+  }
+}
+
+.slidero {
+  position: relative;
+  z-index: 1;
+}
+
+// home-4
+
+.bg-home-4 {
+  padding: 160px 0px 160px 0px;
+}
+
+// home-5
+
+.home-slider {
+  position: relative;
+}
+
+.home-slider .carousel-control-next,
+.carousel-control-prev {
+  width: 6%;
+}
+
+.home-slider .carousel-item,
+.home-slider .carousel {
+  height: 100vh;
+  width: 100%;
+}
+
+.home-slider .carousel-item {
+  background-position: center center;
+  background-size: cover;
+}
+
+// home-6
+
+.bg-home-6 {
+  background-image: url(../images/bg-pattern.png);
+  padding: 180px 0px 180px 0px;
+}
+
+.home-registration-form {
+  border-radius: 3px;
+  box-shadow: $box-shadow;
+  .registration-form {
+    label {
+      font-size: 13px;
+    }
+  }
+}
+
+.registration-input-box {
+  border: none;
+  border-radius: 0px;
+  color: $muted;
+  border-bottom: 1px solid #c5c5c5;
+  box-shadow: none !important;
+  padding-left: 0;
+  padding-right: 0;
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.home-hero-v2 {
+  padding-top: 200px;
+  padding-bottom: 210px;
+  @include below($ipad) {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+  @include below($mobile) {
+    padding-bottom: 95px;
+  }
+
+  p {
+    @include body1();
+    margin: 0 0 24px;
+    @include below($mobile) {
+      br {
+        display: none;
+      }
+    }
+  }
+  .hero-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 175px;
+    flex-wrap: wrap;
+
+    @include between($mobile, $ipad) {
+      margin-top: 96px;
+    }
+    @include below($mobile) {
+      margin-top: 88px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .hero-card-item {
+      position: relative;
+      flex: 0 0 20%;
+      padding: 0 15px;
+
+      &:nth-child(1) {
+        top: -40px;
+      }
+      &:nth-child(2) {
+        top: 48px;
+      }
+      &:nth-child(3) {
+      }
+      &:nth-child(4) {
+        top: 32px;
+      }
+      &:nth-child(5) {
+        top: -40px;
+      }
+      @include above($ipad) {
+        &:nth-child(n + 6) {
+          display: none;
+        }
+      }
+      @include between($mobile, $ipad) {
+        flex: 0 0 33.33%;
+        margin-bottom: 30px;
+        &:nth-child(1) {
+          top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(5) {
+          top: 60px;
+        }
+        &:nth-child(4) {
+          top: 6px;
+        }
+        &:nth-child(3),
+        &:nth-child(6) {
+          top: 30px;
+        }
+      }
+      @include below($mobile) {
+        flex: 0 0 50%;
+        padding: 0 8px;
+        margin-bottom: 16px;
+        &:nth-child(1) {
+          top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(4) {
+          top: 25px;
+        }
+        &:nth-child(n + 5) {
+          display: none;
+        }
+      }
+      .wrapper {
+        position: relative;
+        img {
+          width: 100%;
+        }
+        .img {
+          width: 100%;
+        }
+      }
+
+      // @include above($ipad) {
+      //   &:nth-child(1) {
+      //     .wrapper {
+      //       animation: 10s bounceimg 2s forwards infinite ease;
+
+      //       .img {
+      //         transition-delay: 1.3s;
+      //       }
+      //     }
+      //   }
+      //   &:nth-child(2) {
+      //     .wrapper {
+      //       animation: 10s bounceimg 7s forwards infinite ease;
+
+      //       .img {
+      //         transition-delay: 1.1s;
+      //       }
+      //     }
+      //   }
+      //   &:nth-child(3) {
+      //     .wrapper {
+      //       animation: 10s bounceimg 2s forwards infinite ease;
+
+      //       .img {
+      //         transition-delay: 1.7s;
+      //       }
+      //     }
+      //   }
+      //   &:nth-child(4) {
+      //     .wrapper {
+      //       animation: 10s bounceimg 7s forwards infinite ease;
+
+      //       .img {
+      //         transition-delay: 1.5s;
+      //       }
+      //     }
+      //   }
+      //   &:nth-child(5) {
+      //     .wrapper {
+      //       animation: 10s bounceimg 2s forwards infinite ease;
+
+      //       .img {
+      //         transition-delay: 1.8s;
+      //       }
+      //     }
+      //   }
+      // }
+    }
+    // &.isReady {
+    //   .hero-card-item {
+    //     .wrapper {
+    //       .img {
+    //         transform: translate(0, 0) scale(1);
+    //         opacity: 1;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
+@keyframes bounceimg {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

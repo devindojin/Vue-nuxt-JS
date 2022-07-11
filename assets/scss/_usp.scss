@@ -1,0 +1,80 @@
+.sec-usp {
+  color: #fff;
+  .usp-top {
+    background: $g1;
+    padding: 144px 0 95px;
+    @include below($ipad) {
+      padding-top: 95px;
+      padding-bottom: 64px;
+    }
+    @include below($mobile) {
+      padding-top: 88px;
+      padding-bottom: 64px;
+    }
+  }
+  .usp-bottom {
+    background: $g2;
+    padding: 95px 0;
+    position: relative;
+    @include below($ipad) {
+      padding: 64px 0;
+    }
+    @include below($mobile) {
+      padding-bottom: 0;
+    }
+    .usp-item {
+      border-bottom: 1px solid #fff;
+
+      margin-bottom: 30px;
+      width: 66.66%;
+      @include below($ipad) {
+        width: 100%;
+        margin-bottom: 28px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+        @include below($mobile) {
+          margin-bottom: 64px;
+        }
+      }
+      h4 {
+        margin-bottom: 25px;
+        @include below($ipad) {
+          margin-bottom: 20px;
+        }
+      }
+      p {
+        margin-bottom: 32px;
+        @include below($ipad) {
+          margin-bottom: 28px;
+        }
+      }
+    }
+    .usp-bottom-img {
+      background: #f5f6fb;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: calc(50vw - 25px);
+      height: 100%;
+      padding: 128px 80px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      img {
+        width: 100%;
+        max-width: 720px;
+      }
+      @include below($ipad) {
+        padding: 152px 30px;
+        width: calc(50vw - 15px);
+      }
+      @include below($mobile) {
+        width: 100%;
+        position: static;
+        padding: 64px 30px;
+      }
+    }
+  }
+}

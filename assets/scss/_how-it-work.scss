@@ -1,0 +1,149 @@
+.how-it-works-top {
+  @include between($mobile, $ipad) {
+    padding-bottom: 0 !important;
+  }
+  @include below($mobile) {
+    padding-bottom: 0;
+  }
+  .step-item {
+    @include below($mobile) {
+      padding-bottom: 26px;
+    }
+
+    &:after {
+      content: ' ';
+      width: 30px;
+      height: 30px;
+      background: url(/images/how-it-works-arrow.svg) no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      transform: translate(50%, 0);
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      @media (max-width: 767px) {
+        padding-bottom: 0;
+      }
+      &:after,
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .tab .tab-wrapper h4 {
+    // font-size: 20px !important;
+    color: #33324e !important;
+    @include between($mobile, $ipad) {
+      font-size: 20px !important;
+      margin-top: 24px !important;
+    }
+    @include below($mobile) {
+      margin-top: 18px;
+    }
+  }
+}
+.how-it-works-tabs {
+  padding-bottom: 104px;
+  @include between($mobile, $ipad) {
+    padding-bottom: 80 !important;
+  }
+  @include below($mobile) {
+    padding-bottom: 73px !important;
+  }
+  .tabs-top {
+    .tab-top-item {
+      cursor: pointer;
+      border-bottom: 2px solid #d9dbe1;
+      padding-bottom: 25px;
+      transition: all 0.3s;
+      @media (max-width: 991px) {
+        padding-top: 25px;
+        border: 1px solid #d9dbe1;
+        .tab-icon {
+          display: none;
+        }
+      }
+      h4 {
+        color: #686e9a !important;
+        transition: all 0.3s;
+        font-size: 20px !important;
+        @media (max-width: 991px) {
+          margin-top: 5px !important;
+        }
+      }
+      .arrow {
+        position: absolute;
+        right: 20px;
+        top: 28px;
+        transition: all 0.3s;
+      }
+      &.active {
+        .arrow {
+          transform: rotate(180deg);
+        }
+
+        @media (max-width: 991px) {
+          .tab-icon {
+            display: inline-block;
+          }
+          h4 {
+            margin-top: 25px !important;
+          }
+        }
+        @media (min-width: 992px) {
+          border-color: $g1;
+        }
+        h4 {
+          font-weight: bold;
+          color: $g1 !important;
+        }
+      }
+    }
+  }
+}
+
+.sec-how-it-works {
+  background: $b2;
+  color: #fff;
+  @include below($mobile) {
+    padding-bottom: 40px;
+  }
+  @include body2();
+  .how-it-works-items {
+    margin-top: 96px;
+    @include below($ipad) {
+      margin-top: 60px;
+      h4 {
+        font-size: 20px !important;
+      }
+    }
+    p {
+      @include below($mobile) {
+        width: 80%;
+        margin: auto;
+      }
+    }
+    svg {
+      margin-bottom: 32px;
+      width: 100px;
+      height: 100px;
+      @include below($ipad) {
+        margin-bottom: 28px;
+      }
+      @include below($mobile) {
+        margin-bottom: 24px;
+      }
+    }
+    h4 {
+      margin-bottom: 20px;
+      @include below($ipad) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

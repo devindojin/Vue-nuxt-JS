@@ -1,0 +1,15 @@
+.payment-processing {
+  padding-top: 320px;
+  padding-bottom: 320px;
+  min-height: calc(100vh - 120px);
+  @include above($ipad) {
+  }
+  @include below($ipad) {
+    padding-top: 290px;
+    padding-bottom: 290px;
+  }
+  @include below($ipad) {
+    padding-top: 260px;
+    padding-bottom: 260px;
+  }
+}

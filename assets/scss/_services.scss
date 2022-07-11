@@ -1,0 +1,104 @@
+//
+// screenshot.scss
+//
+
+.service-top {
+  background: $b1;
+  color: #fff;
+  padding-top: 144px;
+  padding-bottom: 80px;
+  &.admin-services {
+    background: #fff;
+    color: #000;
+    padding-bottom: 0 !important;
+    p {
+      @extend .text-muted;
+    }
+  }
+  &.atf {
+    padding-top: 200px;
+    @include below($ipad) {
+      padding-top: 140px;
+    }
+  }
+  @include below($ipad) {
+    padding-top: 96px;
+    padding-bottom: 64px;
+  }
+  @include below($mobile) {
+    padding-bottom: 64px;
+  }
+}
+.services-pricing {
+  background: $b2;
+  padding-top: 144px;
+  padding-bottom: 116px;
+  color: #fff;
+  &.admin-services {
+    background: #fff;
+    color: #000;
+  }
+  @include below($ipad) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+  @include below($mobile) {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
+.nav-pills {
+  margin-bottom: 15px;
+
+  .nav-link {
+    color: $muted;
+    transition: all 0.5s ease;
+    .services-title {
+      color: $dark;
+      i {
+        font-size: 34px;
+      }
+    }
+
+    &:hover {
+      background: rgba($primary, 0.06);
+    }
+    &.active {
+      .services-title {
+        color: $white;
+      }
+      background: $primary;
+      color: rgba($white, 0.5) !important;
+    }
+  }
+}
+
+.mobile-checkout-bar {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 8px 8px 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    span {
+      display: block;
+      &:nth-child(1) {
+        color: #000;
+      }
+      &:nth-child(2) {
+        color: #686e9a;
+      }
+    }
+  }
+  @include below($mobile) {
+    padding: 8px 8px 8px 20px;
+  }
+}

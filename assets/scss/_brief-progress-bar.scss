@@ -1,0 +1,23 @@
+.brief-progress-bar {
+  .stage-item {
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border-top: 1px solid #d9dbe1;
+    border-bottom: 1px solid #d9dbe1;
+    border-left: 1px solid #d9dbe1;
+    display: inline-block;
+    &:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    &:last-child {
+      border-right: 1px solid #d9dbe1;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    &.completed {
+      background: $g1;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .author-img {
+    width: 100%;
+    max-width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+    @include below($mobile) {
+      width: 42px;
+      height: 42px;
+    }
+    img {
+      width: 100%;
+      margin-top: 0 !important;
+    }
+  }
+  .author-info {
+    .author-name {
+      h4 {
+        font: 400 16px/24px 'Nunito Sans';
+        color: #000;
+        margin: 0;
+        letter-spacing: 0.4px;
+      }
+    }
+    .author-post-meta {
+      line-height: 0;
+      span {
+        font: 300 16px/24px 'Nunito Sans';
+        color: #686e9a;
+        &:after {
+          content: '·';
+          font: bold 16px/22px 'Nunito Sans';
+          margin: 0 12px;
+        }
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+        svg {
+          vertical-align: middle;
+          width: 18px;
+          height: 18px;
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+}

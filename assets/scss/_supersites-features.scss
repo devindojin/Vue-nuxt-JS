@@ -1,0 +1,109 @@
+.supersites-features {
+  padding-bottom: 144px;
+  @include below($ipad) {
+    padding-bottom: 88px;
+  }
+  .features-sidebar {
+    position: sticky;
+    top: 120px;
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          color: #686e9a;
+          display: block;
+          padding: 13px;
+          position: relative;
+          &:hover {
+            color: #000;
+          }
+          &:before {
+            content: ' ';
+            background: #bdc2ce;
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+          }
+          &.active {
+            color: $b1;
+            &:before {
+              width: 2px;
+              background: $b1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .features-content {
+    .feature-item {
+      border-bottom: 1px solid #d9dbe1;
+      margin-bottom: 98px;
+      &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+      }
+      @include below($mobile) {
+        margin-bottom: 0;
+        padding: 27px 20px;
+        &:first-child {
+          border-top: 1px solid #d9dbe1;
+        }
+        &:last-child {
+          border-bottom: 1px solid #d9dbe1;
+        }
+      }
+      .feature-title {
+        @include below($mobile) {
+          h2 {
+            color: #686e9a;
+          }
+          position: relative;
+          &:after {
+            content: ' ';
+            width: 24px;
+            height: 24px;
+            background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iZXhwYW5kX21vcmVfYmxhY2tfMjRkcCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+CiAgPHBhdGggaWQ9IlBhdGhfMTMzNSIgZGF0YS1uYW1lPSJQYXRoIDEzMzUiIGQ9Ik0yNCwyNEgwVjBIMjRaIiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjg3Ii8+CiAgPHBhdGggaWQ9IlBhdGhfMTMzNiIgZGF0YS1uYW1lPSJQYXRoIDEzMzYiIGQ9Ik0xNS44OCw5LjI5LDEyLDEzLjE3LDguMTIsOS4yOUExLDEsMCwwLDAsNi43MSwxMC43bDQuNTksNC41OWExLDEsMCwwLDAsMS40MSwwTDE3LjMsMTAuN2ExLDEsMCwwLDAsMC0xLjQxLDEuMDE3LDEuMDE3LDAsMCwwLTEuNDIsMFoiLz4KPC9zdmc+')
+              no-repeat;
+            background-size: cover;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%) rotate(0deg);
+            transition: all 0.3s;
+          }
+        }
+      }
+      .feature-body {
+        @include below($mobile) {
+          transition: all 0.3s;
+          height: 0;
+          opacity: 0;
+          transform: translate(0, 20px);
+          overflow: hidden;
+        }
+      }
+      &.active {
+        @include below($mobile) {
+          .feature-title {
+            h2 {
+              color: #000;
+            }
+            &:after {
+              transform: translate(0, -50%) rotate(180deg);
+            }
+          }
+          .feature-body {
+            height: auto;
+            opacity: 1;
+            transform: translate(0, 0);
+          }
+        }
+      }
+    }
+  }
+}

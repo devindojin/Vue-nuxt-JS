@@ -1,0 +1,52 @@
+.orders {
+}
+.dashboard-table {
+  @include below($ipad) {
+    overflow-x: scroll;
+  }
+  .table-row {
+    font-size: 20px;
+    @include below($ipad) {
+      width: 1110px;
+    }
+    @include below($mobile) {
+      font-size: 16px;
+    }
+    border-left: 1px solid #d9dbe1;
+    border-right: 1px solid #d9dbe1;
+    border-bottom: 1px solid #d9dbe1;
+    div[class*='col'] {
+      > div {
+        padding: 15px 20px;
+        @include below($ipad) {
+          padding: 15px 10px;
+        }
+        color: #33324e;
+        a {
+          &:not(.btn) {
+            color: $b1;
+            font-weight: bold;
+            &:hover {
+              text-decoration: underline !important;
+            }
+          }
+        }
+      }
+    }
+    &.th {
+      background: #fcfcfd;
+      border-top: 1px solid #d9dbe1;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      div[class*='col'] {
+        > div {
+          color: $muted;
+        }
+      }
+    }
+    &:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+}

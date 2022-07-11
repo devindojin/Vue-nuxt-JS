@@ -1,0 +1,265 @@
+.btn {
+  // -webkit-appearance: none;
+  // display: inline-flex;
+  // justify-content: center;
+  // align-items: center;
+  // color: $black;
+  // text-decoration: none;
+  // font-weight: 500;
+  // transition: all 0.3s ease-out;
+  // background: linear-gradient(0deg, $black 100%, $white 0%);
+  // background-position: 0 100px;
+  // background-repeat: no-repeat;
+  // position: relative;
+  // cursor: pointer;
+}
+.btn-default {
+  height: 68px;
+  border: 1px solid $black;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  &:hover {
+    color: $white;
+    background-position: 0 0;
+  }
+  @include below($ipad) {
+    font-size: 18px;
+  }
+  @include below($mobile) {
+    font-size: 16px;
+  }
+}
+
+.btn-large {
+  height: 84px;
+  border: 2px solid $black;
+  font-size: 22px;
+  padding-left: 150px;
+  padding-right: 150px;
+  &:hover {
+    color: $white;
+    background-position: 0 0;
+  }
+  @include below($ipad) {
+    font-size: 20px;
+    height: 76px;
+  }
+  @include below($mobile) {
+    font-size: 16px;
+    height: 72px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.btn-social {
+  border: 1px solid #dfe4ef;
+  color: #686e9a;
+  height: 68px;
+  font-size: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 484px;
+  transition: all 0.2s linear;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include below($ipad) {
+    font-size: 18px;
+    height: 64px;
+  }
+  @include below($mobile) {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  &:hover {
+    color: $black;
+    border-color: #b2b9c8;
+
+    svg {
+      path {
+        fill: $black;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 68px;
+    height: 68px;
+  }
+}
+.btn-mute {
+  background: #eceff5;
+  padding: 26px 75px 29px;
+  font: 500 22px/29px Roboto;
+  color: #686e9a;
+  letter-spacing: 0.26px;
+  margin: 0;
+  display: inline-block;
+  @include below($ipad) {
+    padding: 23px 67px;
+  }
+  @include below($mobile) {
+    font: 500 20px/24px Roboto;
+  }
+}
+.btn-grey {
+  border: 1px solid #dfe4ef;
+  color: #686e9a;
+  height: 50px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.2s linear;
+  vertical-align: text-bottom;
+  &.active {
+    background: $black;
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  &:hover {
+    color: $black;
+    border-color: #b2b9c8;
+    svg {
+      path {
+        fill: $black;
+      }
+    }
+  }
+}
+.btn-clap {
+  border: 1px solid #dfe4ef;
+  color: #686e9a;
+  height: 50px;
+  font-size: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: all 0.2s linear;
+  vertical-align: text-bottom;
+  border-radius: 25px;
+  &:hover {
+    color: $black;
+    border-color: #b2b9c8;
+  }
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+  #popper {
+    margin: 0 !important;
+    position: absolute;
+    left: 18px;
+    opacity: 0;
+    transform: scale(1);
+  }
+  &.animate {
+    #clap {
+      animation: 0.5s clap 0s forwards linear;
+    }
+    #popper {
+      animation: 0.4s popper 0.2s forwards linear;
+    }
+  }
+}
+.btn-reply {
+  @extend .btn-grey;
+}
+.btn-share-container {
+  display: inline-block;
+}
+.btn-share {
+  @extend .btn-grey;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  padding: 0 !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-right: 0 !important;
+  }
+}
+
+.btn-subscribe {
+  @extend .btn-grey;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  padding: 0 !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    margin-right: 0 !important;
+  }
+}
+.btn-like {
+  color: #686e9a;
+  font-size: 16px;
+  span {
+    margin-left: 5px;
+  }
+  svg {
+    width: 20px;
+    height: 18px;
+  }
+  &.liked {
+    color: $b1;
+    svg {
+      animation: 0.3s like 0s forwards linear;
+      path {
+        fill: $b1;
+      }
+    }
+  }
+}
+
+@keyframes popper {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(5) rotate(30deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(10) rotate(50deg);
+  }
+}
+
+@keyframes clap {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes like {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

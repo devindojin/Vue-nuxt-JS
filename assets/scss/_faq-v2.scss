@@ -1,0 +1,32 @@
+.sec-faq-v2 {
+  .faq-items {
+    margin-top: 20px;
+    @include below($ipad) {
+      margin-top: 64px;
+    }
+    .faq-item {
+      border-bottom: 1px solid #e6e7ef;
+      padding: 56px 0;
+      @include below($ipad) {
+        padding: 40px 0;
+      }
+      &:first-child {
+        @include below($mobile) {
+          padding-top: 0;
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+  }
+  &.bg-green {
+    * {
+      color: #fff !important;
+    }
+    .faq-items .faq-item {
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+  }
+}

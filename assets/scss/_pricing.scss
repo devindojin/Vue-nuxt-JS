@@ -1,0 +1,90 @@
+//
+// pricing.scss
+//
+
+.pricing-box {
+  border: 1px solid transparent;
+  position: relative;
+  box-shadow: $box-shadow;
+  padding: 40px 50px 40px 30px;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 36px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  h3 {
+    color: #000;
+  }
+  .pricing-description {
+    @include above($ipad) {
+      padding-right: 30px;
+      border-right: 1px solid #e6e7ef;
+    }
+  }
+  @include between($mobile, $ipad) {
+    padding: 32px 24px 26px 30px;
+  }
+  @include below($mobile) {
+    padding: 35px 15px 32px 15px;
+    margin-bottom: 28px;
+  }
+}
+.pricing-lable {
+  position: absolute;
+  right: 0px;
+  top: 30px;
+  background: $primary;
+  display: inline-block;
+  padding: 4px 19px;
+  color: #fff;
+  border-radius: 20px 0px 0px 20px;
+  font-weight: 600;
+}
+
+.pricing-plan {
+  @include between($mobile, $ipad) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    font-size: 50px;
+    .h2 {
+      @include below($mobile) {
+        font-size: 42px !important;
+      }
+    }
+  }
+  sup {
+    font-size: 20px;
+    position: relative;
+    top: -30px;
+  }
+  .btn {
+    @include below($mobile) {
+      width: 100%;
+    }
+  }
+}
+.pricing-features {
+  > div {
+    margin-bottom: 10px;
+  }
+  p {
+    display: inline;
+    &[data-toggle='tooltip'] {
+      border-bottom: 1px dashed #686e9a;
+      &:hover {
+        border-bottom: 1px solid #686e9a;
+      }
+    }
+  }
+}
+.tooltip-inner {
+  text-align: left !important;
+  font-size: 14px;
+}
+.pricing-faqs {
+  background: #f6f7fb;
+}

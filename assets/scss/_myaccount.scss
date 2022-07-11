@@ -1,0 +1,14 @@
+.your-briefs {
+  @include below($mobile) {
+    .dashboard-table .table-row {
+      width: 100%;
+      div[class*='col'] > div a:not(.btn) {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+      }
+    }
+  }
+}

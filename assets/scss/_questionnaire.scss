@@ -1,0 +1,34 @@
+.questionnaire-tabs {
+  width: 100%;
+  max-width: 100%;
+  @media (max-width: 991px) {
+    overflow-x: scroll;
+  }
+  .questionnaire-tabs-wrapper {
+    display: flex;
+    justify-content: stretch;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .tab {
+      flex: 0 1 16.66%;
+      &:first-child {
+        margin-left: -40px;
+      }
+      @media (max-width: 991px) {
+        flex: 0 0 190px;
+      }
+      .tab-wrapper h4 {
+        font-size: 16px;
+        margin-top: 20px;
+        font-weight: 400;
+      }
+      &.completed {
+        &.green {
+          .tab-wrapper h4 {
+            color: $g1;
+          }
+        }
+      }
+    }
+  }
+}

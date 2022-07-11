@@ -1,0 +1,65 @@
+.theme-live-preview {
+  nav {
+    background: #f6f7fb !important;
+    height: 75px;
+    justify-content: center;
+    padding: 0 !important;
+    #logo-type-writer {
+      display: none !important;
+    }
+    .device-switcher {
+      @media (max-width: 1199px) {
+        display: none !important;
+      }
+      > div {
+        display: inline-flex;
+        border-radius: 4px;
+        border: 1px solid #d9dbe1;
+        overflow: hidden;
+        a {
+          &:hover {
+            background: #fff;
+          }
+          &.active {
+            background: #4252fd;
+            svg {
+              .icon {
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-primary {
+      padding: 11px 30px !important;
+    }
+    #Close_button {
+      &:hover {
+        .bg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  .iframe {
+    position: fixed;
+    height: calc(100vh - 75px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 75px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.full {
+      top: 0;
+      height: 100vh;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.title-with-divider {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 36px;
+  @include below($ipad) {
+    margin-bottom: 28px;
+  }
+
+  @include below($mobile) {
+    margin-bottom: 24px;
+  }
+
+  &:before {
+    // content: ' ';
+    // background: #d0d6e2;
+    // height: 1px;
+    // width: 100%;
+    // position: absolute;
+    // left: 0;
+    // right: 0;
+    // top: 50%;
+    // z-index: 4;
+  }
+  h4 {
+    display: inline-block;
+    // padding-right: 32px;
+    // padding-left: 32px;
+    position: relative;
+    // left: -32px;
+    background: $white;
+    z-index: 5;
+  }
+}
